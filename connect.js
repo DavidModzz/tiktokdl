@@ -1,7 +1,6 @@
 console.log('Iniciando....')
 var express = require('express')
 var cors = require('cors')
-var morgan = require('morgan');
 var secure = require('ssl-express-www')
 
 const PORT = 3000
@@ -19,9 +18,8 @@ app.use(express.static("public"))
 app.use('/', mainrouter)
 
 app.listen(PORT, () => {
-    console.log('Conectando Ao Servidor...')
-    console.log("Servidor Conectado Com Sucesso! Rodando Na Porta http://localhost:" + PORT)
-    console.log(`by: lz mods`)
+    console.log('Conectando al servidor...')
+    console.log("Servidor listo en el puerto:" + PORT)
 })
 
 module.exports = app
